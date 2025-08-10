@@ -83,6 +83,31 @@
       border: none; 
       box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
     }
+    /* Make images inside sections scale to their container */
+    .section img.proficiency-img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 12px auto;
+    }
+    
+    /* Optional: wrap to cap overall width */
+    .proficiency-wrap {
+      width: 100%;
+      max-width: 900px;   /* tweak as needed */
+      margin: 0 auto;
+    }
+    
+    /* Optional: cap height if you want a fixed-tall "divider" look */
+    .proficiency-cap {
+      max-height: 360px;       /* tweak as needed */
+      overflow: hidden;
+    }
+    .proficiency-cap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   </style>
 </head>
 <body>
@@ -293,18 +318,14 @@
 <div class="section">
   <h2>Learning Targets and Standards-Based Grading</h2>
   <p>Grades reflect mastery of Learning Mastery Outcomes (LMOs) assigned to each unit. Every assignment contributes evidence of understanding.</p>
-    <p><a href="https://neoc.osceolaschools.net/71401_3">Standards Based Grading Handbook
+  
+  <p><a href="https://neoc.osceolaschools.net/71401_3">Standards Based Grading Handbook
 </a></p>
 
-  <h3>Grading Breakdown</h3>
-  <ul>
-    <li>4 – Proficient (99%)</li>
-    <li>3 – Nearing Proficient (88%)</li>
-    <li>2 – Below Proficient (77%)</li>
-    <li>1 – Needs Support (66%)</li>
-    <li>0 – Not Enough Evidence (55%)</li>
-    <li>0 – Not Complete (50%)</li>
-  </ul>
+    <div class="proficiency-wrap proficiency-cap">
+  <img class="proficiency-img" src="NeoCityProficiencyScale.jpg" alt="NeoCity Proficiency Scale">
+</div>
+
 
   <h3>Learning Mastery Outcome (LMO) Category</h3>
   <p>LMOs are assessed through the following formats:</p>
@@ -322,6 +343,7 @@
     <li><strong>Written Responses:</strong> Short reflections or discussions.</li>
   </ul>
 </div>
+
 
 <div class="section">
   <h2>Submission Integrity Policy</h2>
@@ -453,13 +475,7 @@
 </div>
 </div>
 <footer>
-        <table class="header-table">
-      <tr>
-        <td><a href="index.html">Home</a></td>
-        <td><a href="https://neoc.osceolaschools.net/">NeoCity</a></td>
-        <td><a href="https://launchpad.classlink.com/osceola">Classlink</a></td>
-      </tr>
-    </table>
+
     <p>NeoCity Academy</p>
     <p>195 NeoCity Way, Kissimmee, FL 34744 | (407) 933-3903</p>
     <p>&copy; 2025 Mr. Joe Morales. All rights reserved.</p>
